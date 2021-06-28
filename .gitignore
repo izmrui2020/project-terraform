@@ -4,5 +4,6 @@
 *.tfstate
 *.tfstate.*
 .tfvars files
+
 terraform.tfvars
 base-infra/infrastructure-prod.config
