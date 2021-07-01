@@ -6,4 +6,6 @@
 .tfvars files
 
 terraform.tfvars
-base-infra/infrastructure-prod.config
+
+base-infra/base-infra-prod.config
+platform/platform-prod.config
