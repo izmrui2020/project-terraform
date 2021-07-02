@@ -7,5 +7,5 @@
 
 terraform.tfvars
 
-base-infra/base-infra-prod.config
-platform/platform-prod.config
+1-base-infra/1-base-infra-prod.config
+2-platform/2-platform-prod.config
