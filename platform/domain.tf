@@ -14,12 +14,13 @@ data "aws_route53_zone" "ecs_domain" {
 
 resource "aws_route53_record" "cert_validation" {
   for_each = {
-    for ecs in aws_acm_certificate.ecs_domain_certificate.domain_validation_options : ecs.domain_name => {
-      name   = ecs.resource_record_name
-      record = ecs.resource_record_value
-      type   = ecs.resource_record_type
+    for ecs in aws_acm_certificate.ecs_domain_certificate.domain_validation_options : ecs.domain_name 
+    => {
+          name   = ecs.resource_record_name
+          record = ecs.resource_record_value
+          type   = ecs.resource_record_type
+        }
     }
-  }
 
   allow_overwrite = true
   name            = each.value.name
